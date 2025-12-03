@@ -1,0 +1,22 @@
+# Python / ML ignores
+__pycache__/
+*.pyc
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Data
+data/raw/*
+data/processed/*
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS / IDE
+.DS_Store
+.vscode/
+
+# Colab / Jupyter junk
+*.swp
