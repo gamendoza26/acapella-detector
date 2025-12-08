@@ -50,7 +50,7 @@ src/preprocessing/dataset.py
 
 This combination demonstrates a complete applied ML pipeline from raw data → features → models → evaluation.
 
-## Results
+## Evaluation & Results
 
 | Model | Test Accuracy | F1 Score |
 |------|--------------|---------|
