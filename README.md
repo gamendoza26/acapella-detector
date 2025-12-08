@@ -31,8 +31,10 @@ This project uses a custom dataset of **34 audio clips** (17 a cappella, 17 non-
 - This enables lightweight training while preserving core frequency patterns
 
 This preprocessing pipeline is implemented in:
+```bash
 src/preprocessing/audio.py
 src/preprocessing/dataset.py
+```
 
 ## Models and Techniques Implemented
 
