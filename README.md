@@ -15,6 +15,7 @@ pip install -r requirements.txt
 
 # Then run the notebook:
 notebooks/acapella_detector_experiments.ipynb
+```
 
 ## Videos
 **Demo Video** – *coming soon*  
