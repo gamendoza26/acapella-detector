@@ -83,7 +83,7 @@ This combination demonstrates a complete applied ML pipeline from raw data → f
 - Solo project credit
 
 ## Project Motivation
-A cappella performance is common in collegiate music communities (including mine), and distinguishing pure vocal tracks from instrument-supported recordings is not always obvious. This project explores whether frequency-based audio features alone can identify a cappella music without deep learning.
+A cappella performance is common in collegiate music communities (including mine, The Pitchforks), and distinguishing pure vocal tracks from instrument-supported recordings is not always obvious. This project explores whether frequency-based audio features alone can identify a cappella music without deep learning. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
 
 ## Individual Contributions
 This project was completed individually. All data collection, feature engineering, model training, evaluation, and documentation were done by me.
