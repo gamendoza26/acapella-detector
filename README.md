@@ -1,6 +1,9 @@
+# A Cappella vs Non-A Cappella Audio Classifier
 
-## What It Does
+## Overview and Motivation
 This project builds a machine learning system that can automatically classify short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
+
+A cappella performance is common in collegiate music communities (including mine, The Pitchforks), and distinguishing pure vocal tracks from instrument-supported recordings is not always obvious. This project explores whether frequency-based audio features alone can identify a cappella music without deep learning. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
 
 ## Quick Start
 ```bash
@@ -15,10 +18,6 @@ pip install -r requirements.txt
 # Then run the notebook:
 notebooks/acapella_detector_experiments.ipynb
 ```
-
-## Videos
-**Demo Video** – *coming soon*  
-**Technical Walkthrough** – *coming soon*
 
 ## Dataset
 This project uses a custom dataset of **34 audio clips** (17 a cappella, 17 non-a cappella), each 7-15 seconds long. I recorded and labeled the clips myself and cannot include the raw files in this repository due to copyright restrictions.
@@ -96,23 +95,9 @@ linear classifier performs so well.
 Explained variance ratios: `[0.78457797, 0.04374359]`
 The first principal component captures ~78 percent of the variance, indicating that a single dominant frequency structure differentiates a cappella vocals from instrument-backed recordings.
 
-
-## Rubric Items Claimed (Machine Learning)
-
-- Train/test split with documented ratios
-- Baseline vs advanced model comparison
-- Regularization techniques (L1, L2, early stopping)
-- Hyperparameter tuning
-- Feature engineering via mel-spectrogram aggregation
-- Dimensionality reduction (PCA)
-- Noise-based robustness / ablation study
-- Multiple evaluation metrics
-- Error analysis
-- Original dataset collection
-- Solo project credit
-
-## Project Motivation
-A cappella performance is common in collegiate music communities (including mine, The Pitchforks), and distinguishing pure vocal tracks from instrument-supported recordings is not always obvious. This project explores whether frequency-based audio features alone can identify a cappella music without deep learning. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
+## Videos
+**Demo Video** – *coming soon*  
+**Technical Walkthrough** – *coming soon*
 
 ## Individual Contributions
 This project was completed individually. All data collection, feature engineering, model training, evaluation, and documentation were done by me.
