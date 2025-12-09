@@ -1,11 +1,55 @@
-# Dataset Setup
+# Project Setup Instructions
 
-Place raw audio files in:
+## Install Dependencies
 
-    data/raw/acapella/
-    data/raw/non_acapella/
+This project requires Python 3.9 or later. Install all dependencies with:
 
-These files are not included in the repository due to size and licensing.
-Run `build_dataset()` to generate processed spectrograms in:
+```bash
+pip install -r requirements.txt
+```
 
-    data/processed/
+## Dataset Setup
+
+This repository does **not** include raw audio files. Create the following directory structure:
+
+```
+data/raw/acapella/
+data/raw/non_acapella/
+```
+
+Place your `.wav` or `.mp3` audio clips into the appropriate folders. Each clip should be 7–15 seconds long.
+
+Processed mel-spectrogram features will be generated automatically the first time the notebook is run and stored in:
+
+```
+data/processed/
+```
+
+No manual preprocessing is required.
+
+## Running the Classifier
+
+Open the main notebook and execute all cells in order:
+
+```
+notebooks/acapella_detector_experiments.ipynb
+```
+
+The notebook will:
+
+- load raw audio files
+- compute mel-spectrogram features using `librosa`
+- train and evaluate logistic regression and random forest models
+- perform hyperparameter tuning
+- generate confusion matrices and PCA visualizations
+
+## Google Drive / Colab Notes (If Applicable)
+
+If running in Google Colab and your dataset is stored on Google Drive, run:
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+Then update dataset paths if needed.
