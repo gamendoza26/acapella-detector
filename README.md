@@ -1,7 +1,7 @@
 # A Cappella vs Non-A Cappella Audio Classifier
 
 ## Overview and Motivation
-This project builds a machine learning system that can automatically classify short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
+This project builds a machine learning system that classifies short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
 
 A cappella performance is common in collegiate music communities (including mine, The Pitchforks), and distinguishing pure vocal tracks from instrument-supported recordings is not always obvious. This project explores whether frequency-based audio features alone can identify a cappella music without deep learning. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
 
@@ -34,9 +34,7 @@ src/preprocessing/audio.py
 src/preprocessing/dataset.py
 ```
 
-## Models and Techniques Implemented
-
-### Core ML Workflow
+## Techniques Implemented
 | Component | Status |
 |----------|-------|
 | Baseline classifier (Logistic Regression) | ✅ |
