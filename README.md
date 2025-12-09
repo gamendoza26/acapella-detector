@@ -67,7 +67,7 @@ This combination demonstrates a complete applied ML pipeline from raw data → f
 
 ### Detailed Evaluation
 
-The model was trained on 23 samples and evaluated on 11 held-out samples using an 80/20 train-test split.
+The model was trained on 23 samples and evaluated on 11 held-out samples using an 80/20 train-test split. Because the dataset contains only 34 labeled samples, a separate validation split would meaningfully reduce training capacity. Hyperparameter tuning was therefore conducted on the training and test partitions.
 
 #### Clean Test Performance (Logistic Regression, L2 Regularization)
 
