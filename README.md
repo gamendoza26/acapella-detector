@@ -86,6 +86,7 @@ The model was trained on 23 samples and evaluated on 11 held-out samples using a
                  Predicted Non-A Cappella   Predicted A Cappella
 True Non-A Cappella            6                     0
 True A Cappella                0                     5
+```
 
 (You will later insert your PCA scatter plot image here)
 
