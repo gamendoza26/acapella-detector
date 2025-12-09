@@ -1,4 +1,3 @@
-<img width="487" height="404" alt="image" src="https://github.com/user-attachments/assets/463f2250-cfa6-444f-9f53-5fd79ffddfe9" /># A Cappella vs Non-A Cappella Audio Classifier 🎵
 
 ## What It Does
 This project builds a machine learning system that can automatically classify short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
@@ -95,6 +94,8 @@ linear classifier performs so well.
 <p align="center">
   <img src="docs/pca_projection.png" alt="PCA projection of audio features" width="500">
 </p>
+<img width="698" height="547" alt="image" src="https://github.com/user-attachments/assets/8b867961-8191-4e00-a283-5e02eccec151" />
+
 
 Explained variance ratios: `[0.78457797, 0.04374359]`
 The first principal component captures ~78 percent of the variance, indicating that a single dominant frequency structure differentiates a cappella vocals from instrument-backed recordings.
