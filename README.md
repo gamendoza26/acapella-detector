@@ -91,11 +91,7 @@ This 2D projection of the 128-dimensional feature vectors shows that a cappella 
 tend to cluster separately from non-a cappella clips, which explains why a simple
 linear classifier performs so well.
 
-<p align="center">
-  <img src="docs/pca_projection.png" alt="PCA projection of audio features" width="500">
-</p>
 <img width="698" height="547" alt="image" src="https://github.com/user-attachments/assets/8b867961-8191-4e00-a283-5e02eccec151" />
-
 
 Explained variance ratios: `[0.78457797, 0.04374359]`
 The first principal component captures ~78 percent of the variance, indicating that a single dominant frequency structure differentiates a cappella vocals from instrument-backed recordings.
