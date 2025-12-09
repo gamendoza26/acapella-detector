@@ -2,6 +2,8 @@
 
 ## What It Does
 This project builds a machine learning system that can automatically classify short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
+Got it – you want a ready-to-paste markdown block, no “coming soon,” just real numbers an
+
 
 ## Quick Start
 ```bash
@@ -65,6 +67,25 @@ This combination demonstrates a complete applied ML pipeline from raw data → f
 - **Simple mel-frequency features** are surprisingly effective at separating classes
 - **PCA plot** reveals clear class separation in two dimensions
 - **Noise ablation** shows performance degradation, demonstrating robustness limits
+
+### Detailed Evaluation
+
+The model was trained on 23 samples and evaluated on 11 held-out samples using an 80/20 train-test split.
+
+#### Clean Test Performance (Logistic Regression, L2 Regularization)
+
+**Metrics**
+- Accuracy: 1.00  
+- Precision (macro): 1.00  
+- Recall (macro): 1.00  
+- F1 Score (macro): 1.00  
+
+**Confusion Matrix**
+
+```text
+                 Predicted Non-A Cappella   Predicted A Cappella
+True Non-A Cappella            6                     0
+True A Cappella                0                     5
 
 (You will later insert your PCA scatter plot image here)
 
