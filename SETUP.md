@@ -37,11 +37,11 @@ notebooks/acapella_detector_demo.ipynb
 
 The notebook will:
 
-- load raw audio files
-- compute mel-spectrogram features using `librosa`
-- train and evaluate logistic regression and random forest models
-- perform hyperparameter tuning
-- generate confusion matrices and PCA visualizations
+- load the pretrained logistic regression model and scaler
+- accept uploaded audio clips
+- preprocess them into mel-spectrogram features
+- classify each clip as a cappella or non-a cappella
+- return a confidence score and optionally display the spectrogram
 
 ## Google Drive / Colab Notes (If Applicable)
 
@@ -53,3 +53,4 @@ drive.mount('/content/drive')
 ```
 
 Then update dataset paths if needed. Raw audio data is not included due to copyright restrictions. You must provide your own clips to reproduce the results.
+
