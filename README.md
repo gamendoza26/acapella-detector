@@ -98,7 +98,7 @@ The first principal component captures ~78 percent of the variance, indicating t
 
 ## Videos
 **Demo Video** – https://youtu.be/DeCQaubyRe4
-**Technical Walkthrough** – *coming soon*
+**Technical Walkthrough** – https://youtu.be/DeCQaubyRe4
 
 ## Individual Contributions
 This project was completed individually. All data collection, feature engineering, model training, evaluation, and documentation were done by me.
