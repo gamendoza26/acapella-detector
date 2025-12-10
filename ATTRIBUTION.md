@@ -18,7 +18,8 @@ These libraries were used according to their public documentation and licenses.
 All audio clips used in this project were **collected, recorded, and labeled by me**. No copyrighted original material is included in this repository. The dataset was created through audio clips on my personal Google Drive storage.
 
 ## AI Assistance Disclosure
-I used ChatGPT as a writing assistant for clarifying ideas, brainstorming next steps, debugging minor issues, and improving the clarity of my written documentation.
+I used ChatGPT as a writing assistant for clarifying ideas, brainstorming next steps, help debug coding issues, and improving the clarity of my written documentation.
 
 ## Academic Integrity Statement
 I affirm that this project represents my own work, and all external contributions are explicitly acknowledged here in accordance with Duke academic policies.
+
