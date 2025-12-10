@@ -3,7 +3,7 @@
 ## Overview and Motivation
 This project builds a machine learning system that classifies short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
 
-A cappella performance is common in collegiate music communities (including mine, The Pitchforks), and distinguishing pure vocal tracks from instrument-supported recordings is not always obvious. When our A Capella group is looking for new music, we spend large portions of time inefficiently looking for a capella tracks. This project explores whether frequency-based audio features alone can identify a cappella music without deep learning. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
+A cappella groups are very common at many universities includine Duke. As a member of The Pitchforks, an all-male a capella group here at Duke, it is difficult for me to find pure vocal tracks from instrument-supported recordings online. When our A Capella group is looking for new music, we spend large portions of time looking for a capella tracks. This project explores whether frequency-based audio features alone can identify a cappella music. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
 
 ## Quick Start
 ```bash
