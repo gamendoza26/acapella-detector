@@ -23,6 +23,8 @@ No processed data is included in this repository. The demo notebook preprocesses
 
 ## Running the Classifier
 
+Note: You do not need the dataset to run inference; the demo uses uploaded audio clips only.
+
 Open the demo notebook and execute all cells in order:
 
 ```
@@ -47,5 +49,6 @@ drive.mount('/content/drive')
 ```
 
 Then update dataset paths if needed. You must provide your own clips (7-15 seconds) to reproduce the results in the exploration notebook.
+
 
 
