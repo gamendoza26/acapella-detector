@@ -3,7 +3,7 @@
 ## Overview and Motivation
 This project builds a machine learning system that classifies short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
 
-A cappella groups are very common at many universities includine Duke. As a member of The Pitchforks, an all-male a capella group here at Duke, it is difficult for me to find pure vocal tracks from instrument-supported recordings online. When our A Capella group is looking for new music, we spend large portions of time looking for a capella tracks. This project explores whether frequency-based audio features alone can identify a cappella music. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
+A cappella groups are very common at many universities includine Duke. As a member of The Pitchforks, an all-male a capella group here at Duke, it is difficult for me to find pure vocal tracks from instrument-supported recordings online. When our a capella group is looking for new music, we spend large portions of time looking for a capella tracks. This project explores whether frequency-based audio features alone can identify a cappella music. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
 
 ## Quick Start
 ```bash
@@ -11,16 +11,12 @@ git clone https://github.com/gamendoza26/acapella-detector.git
 cd acapella-detector
 pip install -r requirements.txt
 
-# Add your own audio clips into:
-# data/raw/acapella
-# data/raw/non_acapella
-
-# Then run the notebook:
+# Run the demo notebook (upload your own audio clip when prompted)
 notebooks/acapella_detector_demo.ipynb
 ```
 
 ## Dataset
-This project uses a custom dataset of **34 audio clips** (17 a cappella, 17 non-a cappella), each 7-15 seconds long. I recorded and labeled the clips myself and cannot include the raw files in this repository due to copyright restrictions.
+This project uses a custom dataset of **34 audio clips** (17 a cappella, 17 non-a cappella), each 7-15 seconds long. I recorded and labeled the clips myself and even included some of my own singing from my a capella group and my piano playing.
 
 ### Preprocessing
 - Convert audio to mono at 22,050 Hz
