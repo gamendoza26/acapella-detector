@@ -20,14 +20,14 @@ This project uses a custom dataset of **34 audio clips** (17 a cappella, 17 non-
 
 ### Preprocessing
 - Convert audio to mono at 22,050 Hz
-- Compute **mel-spectrograms** using `librosa`
-- Summarize each spectrogram by averaging across time → **128-dimensional feature vector**
-- This enables lightweight training while preserving core frequency patterns
+- Compute mel-spectrograms using librosa
+- Convert power values to decibels for perceptual scaling
+- Summarize each spectrogram by averaging across time → a 128-dimensional feature vector
+  (This preserves the frequency profile while reducing model complexity)
 
 This preprocessing pipeline is implemented in:
 ```bash
 src/preprocessing/audio.py
-src/preprocessing/dataset.py
 ```
 
 ## Techniques Implemented
@@ -42,7 +42,7 @@ src/preprocessing/dataset.py
 | Multiple performance metrics (Accuracy, Precision, Recall, F1) | ✅ |
 | Confusion matrices + error analysis | ✅ |
 
-This combination demonstrates a complete applied ML pipeline from raw data → features → models → evaluation.
+This combination demonstrates the applied ML pipeline from raw data → features → models → evaluation in my exploration notebook.
 
 ## Evaluation & Results
 
@@ -53,17 +53,12 @@ This combination demonstrates a complete applied ML pipeline from raw data → f
 | Logistic Regression + Noise | 0.83 | 0.83 |
 | Random Forest | 0.82 | 0.80 |
 
-A validation split was avoided due to dataset size constraints (34 clips). Hyperparameter tuning was conducted on training data with final evaluation on unseen test samples, which aligns with the project’s focus on low-resource audio classification.
-
+Because the dataset is small (34 total clips), I used a **70/30 train–test split** without creating a separate validation set. Allocating another partition would have reduced the number of training examples to the point where the model may not have learned meaningful structure. Instead, **hyperparameter tuning was performed on the training data**, and the final model was evaluated once on the unseen test set. This preserves learning capacity while still providing an unbiased measure of generalization performance.
 
 ### Key Insights
-- **Simple mel-frequency features** are surprisingly effective at separating classes
-- **PCA plot** reveals clear class separation in two dimensions
-- **Noise ablation** shows performance degradation, demonstrating robustness limits
-
-### Detailed Evaluation
-
-The model was trained on 23 samples and evaluated on 11 held-out samples using an 80/20 train-test split. Because the dataset contains only 34 labeled samples, a separate validation split would meaningfully reduce training capacity. Hyperparameter tuning was therefore conducted on the training and test partitions.
+- Mel-spectrogram averaging provides a highly discriminative feature space, enabling perfect linear separation without deep learning.
+- PCA visualization confirms that most variance aligns with a single audio dimension, explaining why logistic regression performs optimally.
+- Introducing controlled noise levels reduced performance which shows the importance of recording conditions.
 
 #### Clean Test Performance (Logistic Regression, L2 Regularization)
 
@@ -84,8 +79,7 @@ True A Cappella                0                     5
 **PCA Projection of Audio Features**
 The mel-frequency features exhibit clear separability between the two classes.  
 This 2D projection of the 128-dimensional feature vectors shows that a cappella clips
-tend to cluster separately from non-a cappella clips, which explains why a simple
-linear classifier performs so well.
+tend to cluster more closely than non-a cappella clips even in 2D. This helps explain why a simple linear classifier performs so well for this task even on limited data.
 
 <img width="698" height="547" alt="image" src="https://github.com/user-attachments/assets/8b867961-8191-4e00-a283-5e02eccec151" />
 
