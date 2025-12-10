@@ -1,9 +1,14 @@
 # A Cappella vs Non-A Cappella Audio Classifier
 
-## Overview and Motivation
-This project builds a machine learning system that classifies short audio clips as **a cappella** (voice-only music) or **non-a cappella** (instrumental or mixed). I collected and curated my own dataset, extracted mel-spectrogram audio features, trained multiple baseline and regularized models, and performed robustness and ablation studies to evaluate performance.
+## What It Does
 
-A cappella groups are very common at many universities includine Duke. As a member of The Pitchforks, an all-male a capella group here at Duke, it is difficult for me to find pure vocal tracks from instrument-supported recordings online. When our a capella group is looking for new music, we spend large portions of time looking for a capella tracks. This project explores whether frequency-based audio features alone can identify a cappella music. This classifier can support automated music cataloging, rehearsal preparation, and digital archiving for collegiate performance groups.
+This project classifies short audio clips as a cappella or non-a cappella using mel-spectrogram features and traditional machine learning models. The system extracts frequency-based audio features, transforms them into fixed-length vectors, and applies a logistic regression classifier to predict the category. The project includes a complete training pipeline, a demo notebook for real-time inference, and evaluation tools for inspecting performance.
+
+**Research question:** Can simple frequency-based features and a traditional ML model reliably distinguish a cappella from non-a cappella audio clips?
+
+## Overview and Motivation
+
+As a member of The Pitchforks, an all-male a cappella group at Duke, I often struggle to find clean voice-only recordings when preparing arrangements. Many available tracks online include hidden instrumentals or backing tracks, and manually checking every clip is time-consuming. This project explores whether mel-spectrogram frequency patterns are distinctive enough to automatically identify a cappella music. A reliable classifier could support rehearsal preparation, cataloging, and digital archiving for collegiate performance groups.
 
 ## Quick Start
 ```bash
@@ -45,6 +50,8 @@ src/preprocessing/audio.py
 This combination demonstrates the applied ML pipeline from raw data → features → models → evaluation in my exploration notebook.
 
 ## Evaluation & Results
+
+Evaluation metrics directly measure the stated project objectives.
 
 | Model | Test Accuracy | F1 Score |
 |------|--------------|---------|
