@@ -97,7 +97,7 @@ Explained variance ratios: `[0.78457797, 0.04374359]`
 The first principal component captures ~78 percent of the variance, indicating that a single dominant frequency structure differentiates a cappella vocals from instrument-backed recordings.
 
 ## Videos
-**Demo Video** – *coming soon*  
+**Demo Video** – https://youtu.be/DeCQaubyRe4
 **Technical Walkthrough** – *coming soon*
 
 ## Individual Contributions
