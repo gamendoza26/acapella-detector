@@ -1,6 +1,9 @@
 librosa
 numpy
+torch
 scikit-learn
 matplotlib
 pydub
 audioread
+soundfile
+joblib
