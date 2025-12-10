@@ -4,7 +4,7 @@
 
 This project classifies short audio clips as a cappella or non-a cappella using mel-spectrogram features and traditional machine learning models. The system extracts frequency-based audio features, transforms them into fixed-length vectors, and applies a logistic regression classifier to predict the category. The project includes a complete training pipeline, a demo notebook for real-time inference, and evaluation tools for inspecting performance.
 
-**Research question:** Can simple frequency-based features and a traditional ML model reliably distinguish a cappella from non-a cappella audio clips?
+**Research question:** Can frequency-based features and a traditional ML model reliably distinguish a cappella from non-a cappella audio clips?
 
 ## Overview and Motivation
 
